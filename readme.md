@@ -86,10 +86,6 @@ weather_mobile/
 3. **Check the 5-day forecast** by navigating through the app interface
 4. **Enjoy real-time weather updates** based on your current location
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ## Acknowledgments
 
 - Weather data provided by [OpenWeatherMap](https://openweathermap.org/)
