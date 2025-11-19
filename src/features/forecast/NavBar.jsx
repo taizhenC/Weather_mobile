@@ -1,13 +1,16 @@
 import { Breadcrumbs, Link } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-function NavBar({ setIsHome }) {
+function NavBar() {
+  const navigate = useNavigate();
+
   return (
     <Breadcrumbs aria-label="breadcrumb">
       <Link
         underline="hover"
         href="#"
         onClick={() => {
-          setIsHome(true);
+          navigate("/");
         }}
       >
         Home

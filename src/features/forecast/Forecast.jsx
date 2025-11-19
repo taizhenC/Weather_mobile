@@ -6,7 +6,7 @@ import ForecastList from "./ForecastList";
 // Weather forecast
 // https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
-function Forecast({ setIsHome, position }) {
+function Forecast({ position }) {
   const { isLoading, weatherForecastList, formatDay } =
     useForecastWeather(position);
   return (
@@ -15,7 +15,7 @@ function Forecast({ setIsHome, position }) {
         <Loading />
       ) : (
         <>
-          <NavBar setIsHome={setIsHome} />
+          <NavBar />
           <ForecastList
             weatherForecastList={weatherForecastList}
             formatDay={formatDay}

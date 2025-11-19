@@ -11,9 +11,13 @@ import styles from "./Home.module.css";
 import { useCurrentWeather } from "../../hooks/useCurrentWeather";
 import Day from "./Day";
 import Loading from "../../ui/Loading";
+import { useNavigate } from "react-router-dom";
 
-function Home({ setIsHome, position }) {
+function Home({ position }) {
   const { temperature, isLoading, weatherIcon } = useCurrentWeather(position);
+
+  const navigate = useNavigate();
+
   return (
     <>
       <Breadcrumbs aria-label="breadcrumb">
@@ -21,7 +25,7 @@ function Home({ setIsHome, position }) {
           underline="always"
           href="#"
           onClick={() => {
-            setIsHome(true);
+            navigate("/");
           }}
         >
           Home
@@ -39,7 +43,7 @@ function Home({ setIsHome, position }) {
               variant="contained"
               size="large"
               onClick={() => {
-                setIsHome(false);
+                navigate("/forcast");
               }}
             >
               Get Start
