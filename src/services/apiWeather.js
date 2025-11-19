@@ -1,4 +1,4 @@
-const API_KEY = "3dcf6fcbc6c54676b2b606fd5551be86";
+const API_KEY = "Your Key";
 
 export async function getCurrentWeather(lat, lon) {
   try {
